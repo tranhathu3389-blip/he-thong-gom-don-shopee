@@ -199,6 +199,17 @@ export default function App() {
     setIsSyncingSheets(true);
     try {
       const payload = itemsToSync.map(it => ({
+  orderId: it.orderId || "",
+  labelModel: it.labelModel || "",
+  stickerModel: it.stickerModel || "",
+  quantity: it.quantity || "",
+  school: it.school || "",
+  class: it.class || "",
+  name: it.name || "",
+  schoolYear: it.schoolYear || "",
+  notes: it.notes || "",
+  createdAt: new Date(it.createdAt).toLocaleString("vi-VN")
+}));
         id: it.id,
         orderId: it.orderId,
         name: it.name,
