@@ -1,0 +1,9 @@
+# Query: fetch("/api/parse-screenshot"
+# ContextLines: 1
+
+1 result - 1 file
+
+src\App.tsx:
+  626      try {
+  627:       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/parse-screenshot`, {
+  628          method: "POST",
