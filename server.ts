@@ -3,12 +3,12 @@ import path from "path";
 import dotenv from "dotenv";
 import { GoogleGenAI, Type } from "@google/genai";
 import { createServer as createViteServer } from "vite";
-
+import cors from "cors";
 dotenv.config();
 
 const app = express();
 const PORT = 3000;
-
+app.use(cors());
 // Increase payload limits for large screenshot files (base64) to prevent PayloadTooLargeError
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
