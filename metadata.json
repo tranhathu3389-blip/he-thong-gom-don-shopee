@@ -1,0 +1,6 @@
+{
+  "name": "Bộ Thu Thập Đơn Hàng Shopee",
+  "description": "Ứng dụng thu thập, tự động phân tích đơn hàng Shopee bằng AI và xuất dữ liệu Excel chuyên nghiệp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
