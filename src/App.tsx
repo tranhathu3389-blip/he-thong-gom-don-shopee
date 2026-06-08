@@ -502,7 +502,7 @@ export default function App() {
     showToast("AI đang đọc và bóc tách thông tin in, vui lòng chờ...", "info");
 
     try {
-      const response = const response = await fetch(`${import.meta.env.VITE_API_URL}/api/parse-order`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/parse-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: aiText }),
