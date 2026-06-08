@@ -502,7 +502,7 @@ export default function App() {
     showToast("AI đang đọc và bóc tách thông tin in, vui lòng chờ...", "info");
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/parse-order`, {
+      const response = await fetch(`https://he-thong-gom-don-shopee.onrender.com/api/parse-order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: aiText }),
@@ -624,7 +624,7 @@ export default function App() {
     showToast("Gemini Vision AI đang đọc ảnh chụp tin nhắn để tách đơn hàng phức tạp...", "info");
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/parse-screenshot`, {
+      const response = await fetch(`https://he-thong-gom-don-shopee.onrender.com/api/parse-screenshot`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: screenshotPreview }),
