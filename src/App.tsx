@@ -210,23 +210,21 @@ export default function App() {
   notes: it.notes || "",
   createdAt: new Date(it.createdAt).toLocaleString("vi-VN")
 }));
-        id: it.id,
-        orderId: it.orderId,
-        name: it.name,
-        school: it.school || "-",
-        class: it.class || "-",
-        schoolYear: it.schoolYear || "-",
-        labelModel: it.labelModel || "-",
-        stickerModel: it.stickerModel || "-",
-        model: it.model || "-",
-        quantity: it.quantity,
-        notes: it.notes || "-",
-        createdAt: new Date(it.createdAt).toLocaleString("vi-VN"),
-        status: it.confirmed ? "Đã duyệt thiết kế" : "Chờ thiết kế"
-      }));
+   
+  
+   
+   
+   
+ 
+  
 
-      // Bypasses CORS checked OPTIONS preflight in browsers using 'text/plain;charset=utf-8' post payload
-      await fetch(currentScriptUrl, {
+    
+ 
+      
+   
+
+
+await fetch(currentScriptUrl, {
         method: "POST",
         mode: "no-cors",
         headers: {
