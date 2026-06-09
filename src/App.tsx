@@ -532,9 +532,9 @@ await fetch(currentScriptUrl, {
 
       const { data } = resData;
       const parsedOrderId = data.orderId || "";
-      const parsedItems = resData.items || [];
+      const parsedItems = data.items || [];
 
-setItems(parsedItems);
+
 
       if (parsedItems.length === 0) {
         showToast("Gemini AI không phát hiện ra danh sách in tên nào trong văn bản này.", "error");
