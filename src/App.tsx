@@ -30,18 +30,18 @@ import {
   ExternalLink
 } from "lucide-react";
 import { OrderItem, ShopeeOrder } from "./types";
-import { INITIAL_SHOPEE_ORDERS, INITIAL_ORDER_ITEMS } from "./data";
+
 
 export default function App() {
   // --- CORE STATE ---
   const [orders, setOrders] = useState<ShopeeOrder[]>(() => {
-    const saved = localStorage.getItem("shopee_orders");
-    return saved ? JSON.parse(saved) : INITIAL_SHOPEE_ORDERS;
-  });
+  const saved = localStorage.getItem("shopee_orders");
+  return saved ? JSON.parse(saved) : [];
+});
 
   const [items, setItems] = useState<OrderItem[]>(() => {
     const saved = localStorage.getItem("shopee_items");
-    const loadedData = saved ? JSON.parse(saved) : INITIAL_ORDER_ITEMS;
+    const loadedData = saved ? JSON.parse(saved) : [];
     return loadedData.map((it: any) => {
       // Compatibility mapping
       const labelModel = it.labelModel !== undefined ? it.labelModel : (it.model && !it.model.toLowerCase().includes("sticker") ? it.model : "");
