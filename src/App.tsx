@@ -571,7 +571,7 @@ setItems(parsedItems);
           confirmed: false, // Default uncompleted
           orderDate: data.orderDate || "",
         };
-      }));
+      });
 
       setItems(prev => [...newCreatedItems, ...prev]);
 
@@ -694,7 +694,7 @@ setItems(parsedItems);
           confirmed: false, // designer completed flag: default "chưa làm"
           orderDate: data.orderDate || "",
         };
-      }));
+      });
 
       setItems(prev => [...newCreatedItems, ...prev]);
 
