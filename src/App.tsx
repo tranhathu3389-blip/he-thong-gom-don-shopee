@@ -532,7 +532,9 @@ await fetch(currentScriptUrl, {
 
       const { data } = resData;
       const parsedOrderId = data.orderId || "";
-      const parsedItems = data.items || [];
+      const parsedItems = responseData.items || [];
+
+setItems(parsedItems);
 
       if (parsedItems.length === 0) {
         showToast("Gemini AI không phát hiện ra danh sách in tên nào trong văn bản này.", "error");
@@ -569,7 +571,7 @@ await fetch(currentScriptUrl, {
           confirmed: false, // Default uncompleted
           orderDate: data.orderDate || "",
         };
-      });
+      }));
 
       setItems(prev => [...newCreatedItems, ...prev]);
 
@@ -654,7 +656,9 @@ await fetch(currentScriptUrl, {
 
       const { data } = resData;
       const parsedOrderId = data.orderId || "";
-      const parsedItems = data.items || [];
+      const parsedItems = responseData.items || [];
+
+setItems(parsedItems);
 
       if (parsedItems.length === 0) {
         showToast("AI không phát hiện được danh sách in nào từ hình ảnh này.", "error");
@@ -690,7 +694,7 @@ await fetch(currentScriptUrl, {
           confirmed: false, // designer completed flag: default "chưa làm"
           orderDate: data.orderDate || "",
         };
-      });
+      }));
 
       setItems(prev => [...newCreatedItems, ...prev]);
 
