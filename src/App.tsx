@@ -645,6 +645,7 @@ setItems(parsedItems);
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
         resData = await response.json();
+        console.log("AI RESPONSE:", resData);
       } else {
         const textError = await response.text();
         throw new Error(textError.slice(0, 150) || "Phản hồi từ máy chủ không hợp lệ (HTML thay vì JSON).");
