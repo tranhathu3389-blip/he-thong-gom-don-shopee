@@ -129,9 +129,9 @@ export default function App() {
   const [sheetUrl, setSheetUrl] = useState(() => {
     return localStorage.getItem("shopee_sheet_url") || "https://docs.google.com/spreadsheets/d/1D-pZhVcx0qjqrwL6nQiI2yUs7roby8eXXn4-pVUNTEQ/edit?usp=sharing";
   });
-  const [appsScriptUrl, setAppsScriptUrl] = useState(() => {
-    return localStorage.getItem("shopee_apps_script_url") || "";
-  });
+  const [appsScriptUrl, setAppsScriptUrl] = useState(
+  localStorage.getItem("apps_script_url") || ""
+);
 
   const handleSheetUrlChange = (value: string) => {
     const trimmed = value.trim();
@@ -141,6 +141,7 @@ export default function App() {
       return;
     }
     setSheetUrl(trimmed);
+localStorage.setItem("shopee_sheet_url", trimmed);
   };
 
   const handleAppsScriptUrlChange = (value: string) => {
@@ -151,6 +152,7 @@ export default function App() {
       return;
     }
     setAppsScriptUrl(trimmed);
+localStorage.setItem("apps_script_url", trimmed);
   };
   const [autoSyncSheets, setAutoSyncSheets] = useState(() => {
     const saved = localStorage.getItem("shopee_auto_sync_sheets");
