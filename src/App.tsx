@@ -532,7 +532,7 @@ await fetch(currentScriptUrl, {
 
       const { data } = resData;
       const parsedOrderId = data.orderId || "";
-      const parsedItems = responseData.items || [];
+      const parsedItems = resData.items || [];
 
 setItems(parsedItems);
 
@@ -656,7 +656,7 @@ setItems(parsedItems);
 
       const { data } = resData;
       const parsedOrderId = data.orderId || "";
-      const parsedItems = responseData.items || [];
+      const parsedItems = resData.items || [];
 
 setItems(parsedItems);
 
