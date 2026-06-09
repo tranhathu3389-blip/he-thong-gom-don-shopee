@@ -574,6 +574,7 @@ await fetch(currentScriptUrl, {
       });
 
       setItems(prev => [...newCreatedItems, ...prev]);
+      console.log("NEW ITEMS:", newCreatedItems);
 
       // Google Sheets Auto Sync
       if (autoSyncSheets && appsScriptUrl) {
